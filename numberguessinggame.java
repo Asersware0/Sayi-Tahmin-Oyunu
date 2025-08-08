@@ -13,16 +13,16 @@ public class SayiTahminOyunu {
 		
 		boolean	 oyundurumu = false;
 		
-		System.out.println("******* SAYI TAHMİN OYUNUNA HOŞ GELDİNİZ");
-		System.out.println("0-99 arasında bir sayı tuttum. Hadi oyuna başlayalım...");
+		System.out.println("******* WELCOME TO THE NUMBER GUESS GAME **********");
+		System.out.println("I picked a number between 0 and 99. Let's start the game...");
 		System.out.println(sayi);
 		
 		while (can > 0 ) {
-			System.out.println("Tahmininiz: ");
+			System.out.println("Your guess: ");
 			tahmin = scan.nextInt();
 			
 			if( (tahmin < 0) || (tahmin > 99 )) {
-				System.out.println("Lütfen 0 ile 99 arasında bir sayı giriniz:  ");
+				System.out.println("Please enter a number between 0 and 99: ");
 				
 				continue;
 			}
@@ -32,8 +32,8 @@ public class SayiTahminOyunu {
 				break;
 				
 			}else {
-				System.out.println("Yanlış Tahmin. Tekrar dene!!! ");
-				System.out.println("Kalan Hakkınız: " + --can);
+				System.out.println("Wrong Guess. Try again!!! ");
+				System.out.println("Your Remaining Rights:  " + --can);
 				
 			}
 			
@@ -42,13 +42,13 @@ public class SayiTahminOyunu {
 		
 		
 		if(oyundurumu) {
-			System.out.println("Tebrikler!!! Doğru Tahmin Ettiniz....");
-			System.out.println("Sayımız: " + sayi);
+			System.out.println("Congratulations!!! You guessed it right....");
+			System.out.println("My Number: " + sayi);
 		}else {
 			
-			System.out.println("Başaramadınız!!!" );
-			System.out.println("Kalan Tahmin Hakkınız: " + can);
-			System.out.println("Bir dahaki sefereeee......");
+			System.out.println("You failed!!!" );
+			System.out.println("Your Remaining Predictions: " + can);
+			System.out.println("next time");
 		}
 		
 	
